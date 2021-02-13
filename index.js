@@ -32,7 +32,8 @@ bot.on("message", async message => {
         segitsegpanel.addField("Bot panel:", "s!bot")
         segitsegpanel.addField("Hibajelentés panel:", "s!hibajelentes")
         segitsegpanel.addField("Kapcsolat panel:", "s!kapcsolat")
-
+        segitsegpanel.setTimestamp()
+        segitsegpanel.setFooter("Terminal ~ 2021")
 
         message.channel.send(segitsegpanel)
     }
