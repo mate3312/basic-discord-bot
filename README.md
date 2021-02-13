@@ -1,5 +1,5 @@
 # basic-discord-bot
-Only one command, and the basic stuffs. [Hungary]
+Only basic stuffs in this discord bot. [Hungary]
 Creator: mxte#3312
 
 UPDATE V1 (2021.02.13, 16:20)
