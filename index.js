@@ -17,9 +17,9 @@ bot.on("ready", () => {
 bot.on("message", async message => {
     if (message.author.bot) return;
     if (message.channel.type == "dm") return;
-    let uzenetvelezes = message.content.split(" ");
-    let cmd = uzenetvelezes[1];
-    let args = uzenetvelezes.slice(1);
+    let uzenetfelezes = message.content.split(" ");
+    let cmd = uzenetfelezes[1];
+    let args = uzenetfelezes.slice(1);
     //start
     if(message.content.startsWith(prefix + "segitseg")) {
         let segitsegpanel = new Discord.RichEmbed()
@@ -27,11 +27,11 @@ bot.on("message", async message => {
         segitsegpanel.setColor("DARK_RED")
         segitsegpanel.setTitle(" ▁ ▂ ▄ ▅ ▆ ▇ █ Terminal █ ▇ ▆ ▅ ▄ ▂ ▁ | Segítség menü")
         segitsegpanel.setDescription("Itt megtalálhatod, hogy miként tudod használni a Terminal botot!")
-        segitsegpanel.addField("Parancsok panel:", "s!parancsok")
-        segitsegpanel.addField("Beállítások panel:", "s!beallitasok")
-        segitsegpanel.addField("Bot panel:", "s!bot")
-        segitsegpanel.addField("Hibajelentés panel:", "s!hibajelentes")
-        segitsegpanel.addField("Kapcsolat panel:", "s!kapcsolat")
+        segitsegpanel.addField("Parancsok panel:", "t!parancsok")
+        segitsegpanel.addField("Beállítások panel:", "t!beallitasok")
+        segitsegpanel.addField("Bot panel:", "t!bot")
+        segitsegpanel.addField("Hibajelentés panel:", "t!hibajelentes")
+        segitsegpanel.addField("Kapcsolat panel:", "!kapcsolat")
         segitsegpanel.setTimestamp()
         segitsegpanel.setFooter("Terminal ~ 2021")
 
@@ -39,22 +39,31 @@ bot.on("message", async message => {
     }
 
     if(message.content.startsWith(prefix + "parancsok")) {
+        let parancsokpanel = new Discord.RichEmbed()
 
+        parancsokpanel.setColor("DARK_RED")
+        parancsokpanel.setTitle(" ▁ ▂ ▄ ▅ ▆ ▇ █ Terminal █ ▇ ▆ ▅ ▄ ▂ ▁ | Segítség menü")
+        parancsokpanel.setDescription("Itt megtalálhatod, a Terminal parancsait!")
+        parancsokpanel.addField("Ping parancs:", "t!ping")
+        parancsokpanel.setTimestamp()
+        parancsokpanel.setFooter("Terminal ~ 2021")
+
+        message.channel.send(parancsokpanel)
     }
-
     if(message.content.startsWith(prefix + "beallitasok")) {
 
     }
-
     if(message.content.startsWith(prefix + "bot")) {
 
     }
-
     if(message.content.startsWith(prefix + "hibajelentes")) {
 
     }
     if(message.content.startsWith(prefix + "kapcsolat")) {
 
+    }
+    if(message.content.startsWith(prefix + "ping")) {
+        message.channel.send("Pong :ping_pong:")
     }
 })
 
