@@ -2,7 +2,6 @@
 Only one command, and the basic stuffs. [Hungary]
 Creator: mxte#3312
 
-- npm i discord.js@11.5.1 [!!!!!!]
 - UPDATED:
 - (1) Added TimeStamp and Footer to embed
 - (2) Added "discord.js - OPEN THIS.exe" just open the bot folder, and automatic install discord.js @ [11.5.1]
