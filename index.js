@@ -1,5 +1,3 @@
-//ODEwMTM5MDkwNDk3Njk5ODUw.YCfS0g.0RnCEAJJ2csS0EL85GbhMyYo7Wo
-
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const config = require("./config.json");
